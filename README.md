@@ -12,23 +12,7 @@
 
 Follow these steps to install and run `facil-wg` on your server or device.
 
-### 1. Clone the Repository
-
-Clone the repository to your server or device where you plan to install the VPN:
-
-```bash
-git clone https://github.com/ricardo-ha/facil-wg
-```
-
-### 2. Build the Docker Image
-Navigate to the directory where you cloned the repository and build the Docker image:
-
-```bash
-cd facil-wg
-docker build -t facil-wg .
-```
-
-### 3. Run the Docker Container
+### 1. Run the Docker Container
 Once the image is built, you can run the container with the following command:
 
 ```bash
@@ -40,10 +24,10 @@ docker run -d \
     --name wg \
     -e PASSWORD="Your password utf-8" \
     -e HOST="Your public ip or your host domain name (DDNS)" \
-    facil-wg
+    ghcr.io/ricardo-ha/facil-wg  
 
 ```
-### 4. Access the Web Interface
+### 2. Access the Web Interface
 After the container is running, you can access the web interface through your browser by navigating to http://<Your_Host_or_IP>.
 
 # Based On
